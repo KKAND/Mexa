@@ -5,11 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mks.mexa.MainActivity">
-    <com.amap.api.maps2d.MapView
+    <LinearLayout
+        android:id="@+id/LL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/LL2"
+        >
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </com.amap.api.maps2d.MapView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LL2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卫星图"
+
+            />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/button"
+            android:text="平面图"/>
+
+    </LinearLayout>
+
+    <!--<com.amap.api.maps2d.MapView
         android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
     </com.amap.api.maps2d.MapView>
-
+    <Button
+        android:id="@+id/button"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map"
+        android:text="卫星图"
+        android:layout_alignBottom="@+id/map"
+        android:layout_alignParentBottom="true"
+        />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map"
+        android:layout_toRightOf="@+id/button"
+        android:text="平面图"/>-->
 </RelativeLayout>
